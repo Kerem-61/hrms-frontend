@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "semantic-ui-css/semantic.min.css";
+import Navi from "./layouts/Navi";
+import Dashboard from "./layouts/Dashboard";
+import Category from "./pages/Category";
+import { Grid, Menu, Table } from "semantic-ui-react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Grid>
+        <Grid.Row>
+          <Navi />
+        </Grid.Row>
+        <Grid.Row>
+          <Dashboard />
+        </Grid.Row>
+      </Grid>
     </div>
   );
 }
